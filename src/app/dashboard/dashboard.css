@@ -1,0 +1,105 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #f8fafc;
+}
+
+.nav {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.nav h1 {
+  color: #1a1a2e;
+  margin: 0;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.tab:hover {
+  background: #e2e8f0;
+  color: #1a1a2e;
+}
+
+.tab.active {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  color: white;
+}
+
+.main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.studentSection h2,
+.lecturerSection h2 {
+  color: #f8fafc;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: #1a1a2e;
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.details {
+  color: #334155;
+}
+
+.details p {
+  margin: 0.5rem 0;
+}
+
+.details strong {
+  color: #1a1a2e;
+}
+
+.details ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.details li {
+  margin: 0.25rem 0;
+} 

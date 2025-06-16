@@ -1,0 +1,58 @@
+                                          Table "public.courses"
+    Column    |          Type          | Collation | Nullable |                  Default
+--------------+------------------------+-----------+----------+--------------------------------------------
+ course_id    | integer                |           | not null | nextval('courses_course_id_seq'::regclass)
+ course_code  | character varying(10)  |           | not null |
+ course_name  | character varying(100) |           | not null |
+ credit_hours | integer                |           | not null |
+
+
+                                      Table "public.enrollments"
+     Column      |  Type   | Collation | Nullable |                      Default
+-----------------+---------+-----------+----------+----------------------------------------------------
+ enrollment_id   | integer |           | not null | nextval('enrollments_enrollment_id_seq'::regclass)
+ student_id      | integer |           | not null |
+ course_id       | integer |           | not null |
+ enrollment_date | date    |           | not null |
+
+                                     Table "public.fees"
+    Column    |     Type      | Collation | Nullable |               Default
+--------------+---------------+-----------+----------+--------------------------------------
+ fee_id       | integer       |           | not null | nextval('fees_fee_id_seq'::regclass)
+ student_id   | integer       |           | not null |
+ total_fee    | numeric(10,2) |           | not null |
+ amount_paid  | numeric(10,2) |           | not null |
+ payment_date | date          |           | not null |
+
+
+                               Table "public.lecturer_course"
+   Column    |  Type   | Collation | Nullable |                   Default
+-------------+---------+-----------+----------+---------------------------------------------
+ id          | integer |           | not null | nextval('lecturer_course_id_seq'::regclass)
+ lecturer_id | integer |           | not null |
+ course_id   | integer |           | not null |
+
+
+                                           Table "public.lecturers"
+   Column    |          Type          | Collation | Nullable |                    Default
+-------------+------------------------+-----------+----------+------------------------------------------------
+ lecturer_id | integer                |           | not null | nextval('lecturers_lecturer_id_seq'::regclass)
+ full_name   | character varying(100) |           | not null |
+ email       | character varying(100) |           | not null |
+
+                                            Table "public.students"
+     Column      |          Type          | Collation | Nullable |                   Default                   
+-----------------+------------------------+-----------+----------+----------------------------------------------
+ student_id      | integer                |           | not null | nextval('students_student_id_seq'::regclass) first_name      | character varying(50)  |           | not null |
+ last_name       | character varying(50)  |           | not null |
+ email           | character varying(100) |           | not null |
+ department      | character varying(100) |           | not null |
+ enrollment_year | integer                |           | not null |
+
+                                      Table "public.ta_assignments"
+   Column    |          Type          | Collation | Nullable |                  Default
+-------------+------------------------+-----------+----------+--------------------------------------------
+ id          | integer                |           | not null | nextval('ta_assignments_id_seq'::regclass)
+ lecturer_id | integer                |           | not null |
+ ta_name     | character varying(100) |           | not null |
+
